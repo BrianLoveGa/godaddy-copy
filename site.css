@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+  color: white;
+}
+.firstline{
+    text-align: center;
+    font-size:600%;
+
+}
+
+a,
+.btn {
+  text-decoration: none;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin: 2%;
+  border: 3px solid green;
+}
+
+.btn {
+  padding: 5px 25px;
+}
