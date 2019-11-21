@@ -15,6 +15,10 @@ body {
   color: rgb(197, 190, 190);
   padding: 40px 20px 70px;
 }
+.myface{
+    max-width:300px;
+    max-height:600px;
+}
 input {
   background-color: rgb(22, 22, 22);
   font-size: 30px;
@@ -49,70 +53,93 @@ a,
 .btn {
   padding: 5px 25px;
 }
-.projs{
-    text-align: center;
-    margin: 2% 4%;
+.projs {
+  text-align: center;
+  margin: 2% 4%;
 }
-.list{
-    text-align: justify;
+
+.projsss{
+    padding:30px;
+    margin:5%;
+    max-width:300px;
+    max-height:200px;
 }
-.about{
-    background-color: rgb(22,22,22);
-    text-align: center;
+.list {
+  text-align: justify;
+}
+.about {
+  background-color: rgb(22, 22, 22);
+  text-align: center;
 }
 .original {
   margin: 5%;
 }
 
-.contact{text-align: center;}
+.contact {
+  text-align: center;
+}
 
 .green {
   color: green;
 }
-.black{
-    background-color: black;
+.black {
+  background-color: black;
 }
-.aside{
-    padding:30px 18px;
+.aside {
+  padding: 30px 18px;
+}
+
+.responsive {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
   background-color: rgb(1, 100, 1);
   margin: 15% 0 0;
-  padding:20px;
+  padding: 20px;
   text-align: center;
 }
 .foot {
   margin: 0 auto;
 }
 
-.logos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    
+.logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.ft{
-    background-color: rgb(1, 100, 1);
-    border: 2px solid  rgb(1, 100, 1);
+.ft {
+  background-color: rgb(1, 100, 1);
+  border: 2px solid rgb(1, 100, 1);
+}
 
+.h5left {
+  text-align: left;
+  margin: 8% 2% 1%;
+}
+
+.h5right {
+  text-align: right;
+  margin: -1% 2% 10%;
+}
+
+.git {
+  text-align: center;
 }
 
 
-.h5left{
-    text-align: left;
-    margin:8% 2% 1%;
-}
 
-.h5right{
-    text-align: right;
-    margin:-1% 2% 10%;
-}
+@media screen and (max-width:980px){
+
+    input{
+        width:80%;
+        margin:2%;
+        
+    }
 
 
-.git{
-    text-align: center;
 }
