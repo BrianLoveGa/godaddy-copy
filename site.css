@@ -29,6 +29,11 @@ body {
   background-color: rgb(22, 22, 22);
   color: rgb(197, 190, 190);
   padding: 40px 20px 70px 40px;
+}
+
+.about,
+.intro {
+  padding: 40px 5px 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -41,7 +46,6 @@ body {
 .h2top {
   font-size: 60px;
   color: white;
-  
 }
 .intro1 {
   font-size: 27px;
@@ -72,17 +76,13 @@ a,
   text-decoration: none;
   background-color: green;
   color: white;
-  padding: 10px;
-  margin: 10%;
+  padding: 5px;
+  margin: 5%;
   border: 3px solid green;
 }
 
 .btn {
   padding: 5px 25px;
-}
-.projs {
-  text-align: center;
-  margin: 2% 4% 20%;
 }
 
 .projsss {
@@ -107,12 +107,39 @@ a,
 
 .green {
   color: green;
+  font-size: 50px;
+  text-align: center;
 }
+.title {
+  font-size: 28px;
+  color: rgb(214, 213, 210);
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-content: space-between;
+}
+.projs {
+  text-align: center;
+  margin: 2% 4% 20%;
+  width: 22%;
+}
+
 .black {
   background-color: black;
 }
 .aside {
-  padding: 30px 18px;
+  order: -1;
+  width: 30%;
+  margin: 1% 8% 8% 2%;
+}
+.city {
+  max-width: 700px;
+  width: 80%;
+  height: 800px;
 }
 
 .responsive {
@@ -157,9 +184,28 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 1201px) {
+@media screen and (max-width: 1231px) {
   .tubepic {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .city {
+    max-width: 700px;
+    width: 80%;
+    height: 80%;
+    order: -2;
+    margin:3% 9%;
+  }
+  .aside {
+    padding: 30px 3px;
+    width: 100%;
+    order: 1;
+  }
+  .list{
+      width:90%;
+      margin:0 10%;
   }
 }
 
@@ -184,6 +230,9 @@ footer {
   .intro1 {
     font-size: 20px;
   }
+  .projs {
+    width: 32%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -201,5 +250,8 @@ footer {
   }
   .intro1 {
     font-size: 25px;
+  }
+  .projs {
+    width: 80%;
   }
 }
