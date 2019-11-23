@@ -202,6 +202,10 @@ footer {
   text-align: center;
 }
 
+.no{
+  list-style-type: none;
+}
+
 @media screen and (max-width: 1231px) {
   .tubepic {
     margin: 0;
