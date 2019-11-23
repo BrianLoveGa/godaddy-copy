@@ -10,6 +10,7 @@ body {
   font-size: 470%;
   width: 98%;
   color: green;
+  margin:1% auto;
 }
 
 .matrixtube {
@@ -76,9 +77,10 @@ a,
   text-decoration: none;
   background-color: green;
   color: white;
-  padding: 5px;
-  margin: 5%;
+  padding: 15px;
+  margin: 5% ;
   border: 3px solid green;
+  display: inline-block;
 }
 
 .btn {
@@ -86,7 +88,7 @@ a,
 }
 
 .projsss {
-  padding: 30px;
+  padding: 30px 0;
   max-width: 300px;
   max-height: 200px;
 }
@@ -110,8 +112,9 @@ a,
   font-size: 50px;
   text-align: center;
 }
-.title {
-  font-size: 28px;
+.title,
+.title1 {
+  font-size: 22px;
   color: rgb(214, 213, 210);
 }
 
@@ -121,10 +124,12 @@ a,
   flex-wrap: wrap;
   width: 100%;
   align-content: space-between;
+  text-align: center;
+  margin: 1% 0 8%;
 }
 .projs {
   text-align: center;
-  margin: 2% 4% 20%;
+  margin: 2% 4% 5%;
   width: 22%;
 }
 
@@ -135,11 +140,16 @@ a,
   order: -1;
   width: 30%;
   margin: 1% 8% 8% 2%;
+  font-size: 130%;
 }
 .city {
   max-width: 700px;
-  width: 80%;
-  height: 800px;
+  width: 90%;
+  height: 950px;
+}
+
+.eggshell {
+  color: rgb(153, 157, 165);
 }
 
 .responsive {
@@ -192,20 +202,27 @@ footer {
 
 @media screen and (max-width: 1200px) {
   .city {
-    max-width: 700px;
-    width: 80%;
+    max-width: 1190px;
+    width: 94%;
     height: 80%;
     order: -2;
-    margin:3% 9%;
+    margin: 3%;
   }
   .aside {
     padding: 30px 3px;
     width: 100%;
     order: 1;
   }
-  .list{
-      width:90%;
-      margin:0 10%;
+  .list {
+    width: 90%;
+    margin: 0 10%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .title1 {
+    font-size: 17px;
+    color: rgb(112, 9, 26);
   }
 }
 
@@ -232,6 +249,13 @@ footer {
   }
   .projs {
     width: 32%;
+  }
+}
+@media screen and (max-width: 930px) {
+  a {
+    padding: 2px;
+    margin: 2%;
+    border: 2px solid rgb(145, 245, 145);
   }
 }
 
