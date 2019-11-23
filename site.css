@@ -9,8 +9,8 @@ body {
   text-align: center;
   font-size: 470%;
   width: 98%;
-  color: green;
-  margin:1% auto;
+  color: white;
+  margin: 1% auto;
 }
 
 .matrixtube {
@@ -78,7 +78,7 @@ a,
   background-color: green;
   color: white;
   padding: 15px;
-  margin: 5% ;
+  margin: 5%;
   border: 3px solid green;
   display: inline-block;
 }
@@ -101,7 +101,7 @@ a,
 }
 .original {
   margin: 5%;
-  text-align:center;
+  text-align: center;
 }
 
 .contact {
@@ -114,10 +114,10 @@ a,
   font-size: 50px;
   text-align: center;
 }
-.green1{
+.green1 {
   background-color: rgb(22, 22, 22);
-  padding:20px;
-  margin:-20px;
+  padding: 20px;
+  margin: -20px;
 }
 .title,
 .title1 {
@@ -230,7 +230,6 @@ footer {
 @media screen and (max-width: 1100px) {
   .title1 {
     font-size: 17px;
-    color: rgb(112, 9, 26);
   }
 }
 
@@ -242,7 +241,6 @@ footer {
 
   .firstline {
     font-size: 300%;
-    color: blue;
   }
   .h2top,
   .intro1 {
@@ -263,14 +261,13 @@ footer {
   a {
     padding: 2px;
     margin: 2%;
-    border: 2px solid rgb(145, 245, 145);
   }
 }
 
 @media screen and (max-width: 500px) {
   .firstline {
     font-size: 290%;
-    color: yellow;
+
     margin: 0% auto;
   }
   .h2top,
