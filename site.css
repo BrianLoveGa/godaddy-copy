@@ -19,13 +19,13 @@ body {
   width: 100%;
 }
 .tubepic {
-  width: 99%;
+  width: 100%;
   height: auto;
   min-height: 310px;
   max-height: 430px;
   max-width: 1000px;
-  padding: 5px 5%;
-  margin: 5% 10%;
+  min-width: 400px;
+  margin: 5% 15%;
 }
 
 .intro {
@@ -210,7 +210,7 @@ footer {
 
 @media screen and (max-width: 1231px) {
   .tubepic {
-    margin: 0;
+    margin: 5%;
   }
 }
 
