@@ -21,8 +21,8 @@ body {
   height: auto;
   min-height: 310px;
   max-height: 430px;
-  max-width: 1200px;
-  padding: 5px;
+  max-width: 1000px;
+  padding: 5px 5%;
   margin: 5% 10%;
 }
 
@@ -101,16 +101,23 @@ a,
 }
 .original {
   margin: 5%;
+  text-align:center;
 }
 
 .contact {
   text-align: center;
 }
 
-.green {
+.green,
+.green1 {
   color: green;
   font-size: 50px;
   text-align: center;
+}
+.green1{
+  background-color: rgb(22, 22, 22);
+  padding:20px;
+  margin:-20px;
 }
 .title,
 .title1 {
@@ -119,6 +126,7 @@ a,
 }
 
 .projects {
+  background-color: rgb(22, 22, 22);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
