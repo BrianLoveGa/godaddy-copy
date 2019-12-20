@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="images/BL-web-pico.png" />
+    <link rel="stylesheet" type="text/Css" href="fun.css" />
+    <title>JS FUN</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="top">The fun site</h1>
+    </header>
+    <div class="opener">
+      <h1>If you use a template site you can't add your own Javascript</h1>
+      <h2>Where is the fun in that?</h2>
+    </div>
+
+    <div class="mouseMe" id="clickBait" onclick="randoColorSpot()">
+      <h3>Click your mouse in this box</h3>
+      <p>How much fun is that, you don't get that from a template site</p>
+      <p>That's why you should hire a dev to make your pages</p>
+      <p>Do you fix your own car or go to a mechanic?</p>
+      <p>Do you do your own taxes or go to an accountant?</p>
+      <p>
+        Do you cut your own hair or go to a salon/barber/stylist/greatclips?
+      </p>
+    </div>
+    <div class="bulb">
+      <h2>
+        Here is an on off switch for a web light bulb from the first page of w3
+        JS
+      </h2>
+
+      <button
+        onclick="document.getElementById('myImage').src='./images/pic_bulbon.gif'"
+      >
+        Turn on the light
+      </button>
+
+      <img id="myImage" src="./images/pic_bulboff.gif" style="width:100px" />
+
+      <button
+        onclick="document.getElementById('myImage').src='./images/pic_bulboff.gif'"
+      >
+        Turn off the light
+      </button>
+      <br />
+      <h2>It gets lonely and cold sometimes doing all this coding</h2>
+      <h2>Need a date?</h2>
+      <button
+        type="button"
+        onclick="document.getElementById('date').innerHTML=Date()"
+      >
+        Click me then
+      </button>
+      <button onclick="document.getElementById('date').innerHTML='' ">
+        Clear it I'm busy
+      </button>
+      <p id="date"></p>
+    </div>
+
+    <div class="animate">
+      <p><button onclick="myMove()">Click Me to see red square down</button></p>
+
+      <div id="container">
+        <div id="animate"></div>
+      </div>
+    </div>
+    <div class="scratch" onmousedown="mDown(this)" onmouseup="mUp(this)">
+      I've got an itch click and hold and wiggle to scratch it for me please ???
+      PLEASE I don't have fingers ....
+    </div>
+    <div class="toons">
+      <h2>Wubba Lubba Dub Dub</h2>
+      <h3>
+        If you still need a date click the button below for a random Rick and
+        Morty Character
+      </h3>
+      <button>R & M Date</button>
+    </div>
+
+    <script src="fun.js"></script>
+  </body>
+</html>

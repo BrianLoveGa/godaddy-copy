@@ -1,0 +1,45 @@
+body {
+  background-color: skyblue;
+}
+
+.top {
+  background-color: lightgrey;
+}
+
+.mouseMe {
+  background-color: whitesmoke;
+  padding: 1.5em;
+}
+.bulb,
+.bulb h2,
+.bulb img,
+.bulb button {
+  background-color: white;
+  padding: 1em;
+  margin: 3%;
+}
+
+.bulb {
+  border-radius: 13px;
+}
+
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+
+.scratch {
+  background-color: #d94a38;
+  width: 290px;
+  height: 150px;
+  padding: 20px;
+  cursor: pointer;
+}
