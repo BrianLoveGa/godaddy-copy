@@ -43,3 +43,24 @@ body {
   padding: 20px;
   cursor: pointer;
 }
+
+
+section article {
+  width: 33%;
+  float: left;
+}
+
+section p {
+  margin: 5px 0;
+}
+
+section ul {
+  margin-top: 0;
+}
+
+footer {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+
+}
