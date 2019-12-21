@@ -41,8 +41,10 @@ getRMDate = async => {
   fetch(urlRM)
     .then(res => res.json())
     .then(res => console.log("success!", res))
-    // .then(res => console.log(res.name))
-    // .then(document.getElementById('rmName').innerHTML='res.name')
+    .then()
+    // .then(console.log(res.name))
+    .then(res => console.log(res.name))
+    .then((document.getElementById("rmName").innerHTML = "res.name"))
     .catch(err => console.log("something went wrong...", err));
 };
 
