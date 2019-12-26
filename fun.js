@@ -43,10 +43,14 @@ getRMDate = async => {
   console.log(urlRM);
   fetch(urlRM)
     .then(res => res.json())
+    // .then(res => {
+    //   return res.json;
+    // })
+
     .then(res => console.log("success!", res))
-    .then(res => {
-      return res.json;
-    })
+    // .then(res => {
+    //   return res.json;
+    // })
 
     // data = res.json;
 
