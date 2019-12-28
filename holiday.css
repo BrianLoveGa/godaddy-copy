@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  background-color: thistle;
+  
   list-style: none;
+  font-family: Arial, sans-serif;
 }
 li {
   margin: 3%;
@@ -13,8 +14,7 @@ li {
 .snowflake {
   color: #fff;
   font-size: 1em;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 5px #000;
+  
 }
 
 @-webkit-keyframes snowflakes-fall {
@@ -138,6 +138,7 @@ li {
   padding: 50px;
   position: relative;
   height: 400px;
+  background-color: thistle;
 }
 
 .Hat_Top {
@@ -294,7 +295,7 @@ header nav {
   border-bottom: 10px solid #f9690e;
   position: fixed;
   top: 0;
-  left: 0;
+  text-align: center;
   flex-wrap: nowrap;
   z-index: 30;
 }
@@ -329,12 +330,14 @@ header .nav-item a.active {
   color: #f9690e;
 }
 
-.main {
-  margin-top: 25vh;
+.page {
+  margin-top: 20vh;
+  background-color: thistle;
 }
 
 .holiday {
   margin: 10% 2%;
+  background-color: thistle;
 }
 
 .nutContainer {

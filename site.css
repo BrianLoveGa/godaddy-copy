@@ -184,6 +184,13 @@ Descr: Custom ON/OFF checkbox toggle
 }
 
 /* end switch button */
+.holidayLink {
+  border-radius: 20%;
+}
+.holidayLink:hover {
+  background-color: white;
+  color: green;
+}
 
 .intro {
   background-color: var(--color-bg2);
