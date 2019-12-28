@@ -306,6 +306,12 @@ header .nav-item {
   background-color: #262534;
   flex-wrap: nowrap;
 }
+.nav-item-Home a{
+    background-color: blue;
+    color:white;
+    text-decoration: none;
+    padding:10px;
+}
 
 header .nav-item a {
   color: white;
@@ -331,8 +337,9 @@ header .nav-item a.active {
 }
 
 .page {
-  margin-top: 20vh;
+  margin-top: 21vh;
   background-color: thistle;
+  padding:15px;
 }
 
 .holiday {
