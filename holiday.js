@@ -1,4 +1,5 @@
 console.log("Holidayz");
+
 function startTimer() {
   /**
      New Year 2020 Countdown Timer
@@ -16,7 +17,7 @@ function startTimer() {
   var leftsec = 59 - todaytm.getSeconds();
   if (Math.floor(leftdays) <= -1) {
     document.getElementById("scg-nyc-msg").innerHTML =
-      "It's New Year Time, Friends!<br/>Happy New Year 2020";
+      "It's a New Year a New Time, Friends and Family! <br/> Happy New Year 2020";
     return;
   } else {
     document.getElementById("scg-clock-days").innerHTML = scgWrapChars(

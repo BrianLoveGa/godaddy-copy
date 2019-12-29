@@ -154,9 +154,9 @@ li {
 .Hat_Middle {
   background-color: rgb(255, 0, 0);
   position: absolute;
-  left: 97px;
+  left: 92px;
   top: 60px;
-  width: 51px;
+  width: 62px;
   height: 14px;
   z-index: 18;
 }
@@ -164,7 +164,7 @@ li {
 .Hat_Bottom {
   background-color: rgb(0, 0, 0);
   position: absolute;
-  left: 79px;
+  left: 75px;
   top: 68px;
   width: 88px;
   height: 13px;
@@ -384,7 +384,7 @@ position: relative;
   border-radius: 0 0 10px 10px;
   padding: 10px 10px 0;
   position: relative;
-  width: 145px;
+  width: 166px;
   z-index:10;
 }
 
