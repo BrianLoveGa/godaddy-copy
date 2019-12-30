@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  
+
   list-style: none;
   font-family: Arial, sans-serif;
 }
@@ -14,7 +14,6 @@ li {
 .snowflake {
   color: #fff;
   font-size: 1em;
-  
 }
 
 @-webkit-keyframes snowflakes-fall {
@@ -25,6 +24,15 @@ li {
     top: 100%;
   }
 }
+@-webkit-keyframes leafs-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 @-webkit-keyframes snowflakes-shake {
   0%,
   100% {
@@ -36,6 +44,18 @@ li {
     transform: translateX(80px);
   }
 }
+
+@-webkit-keyframes leafs-shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+}
 @keyframes snowflakes-fall {
   0% {
     top: -10%;
@@ -44,6 +64,15 @@ li {
     top: 100%;
   }
 }
+@keyframes leafs-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 @keyframes snowflakes-shake {
   0%,
   100% {
@@ -52,6 +81,38 @@ li {
   50% {
     transform: translateX(80px);
   }
+}
+@keyframes leafs-shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(40px);
+    transform: translateX(120px);
+  }
+}
+
+.leafs {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: leafs-fall, leafs-shake;
+  -webkit-animation-duration: 20s, 5s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: leafs-fall, leafs-shake;
+  animation-duration: 20s, 5s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
 }
 .snowflake {
   position: fixed;
@@ -73,65 +134,90 @@ li {
   animation-iteration-count: infinite, infinite;
   animation-play-state: running, running;
 }
-.snowflake:nth-of-type(0) {
+.snowflake:nth-of-type(0),
+.leafs:nth-of-type(0) {
   left: 1%;
   -webkit-animation-delay: 0s, 0s;
   animation-delay: 0s, 0s;
 }
-.snowflake:nth-of-type(1) {
+.snowflake:nth-of-type(1),
+.leafs:nth-of-type(1) {
   left: 10%;
   -webkit-animation-delay: 1s, 1s;
   animation-delay: 1s, 1s;
 }
-.snowflake:nth-of-type(2) {
+.snowflake:nth-of-type(2),
+.leafs:nth-of-type(2) {
   left: 20%;
   -webkit-animation-delay: 6s, 0.5s;
   animation-delay: 6s, 0.5s;
 }
-.snowflake:nth-of-type(3) {
+.snowflake:nth-of-type(3),
+.leafs:nth-of-type(3) {
   left: 30%;
   -webkit-animation-delay: 4s, 2s;
   animation-delay: 4s, 2s;
 }
-.snowflake:nth-of-type(4) {
+.snowflake:nth-of-type(4),
+.leafs:nth-of-type(4) {
   left: 40%;
   -webkit-animation-delay: 2s, 2s;
   animation-delay: 2s, 2s;
 }
-.snowflake:nth-of-type(5) {
+.snowflake:nth-of-type(5),
+.leafs:nth-of-type(5) {
   left: 50%;
   -webkit-animation-delay: 8s, 3s;
   animation-delay: 8s, 3s;
 }
-.snowflake:nth-of-type(6) {
+.snowflake:nth-of-type(6),
+.leafs:nth-of-type(6) {
   left: 60%;
   -webkit-animation-delay: 6s, 2s;
   animation-delay: 6s, 2s;
 }
-.snowflake:nth-of-type(7) {
+.snowflake:nth-of-type(7),
+.leafs:nth-of-type(7) {
   left: 70%;
   -webkit-animation-delay: 2.5s, 1s;
   animation-delay: 2.5s, 1s;
 }
-.snowflake:nth-of-type(8) {
+.snowflake:nth-of-type(8),
+.leafs:nth-of-type(8) {
   left: 80%;
   -webkit-animation-delay: 1s, 0s;
   animation-delay: 1s, 0s;
 }
-.snowflake:nth-of-type(9) {
+.snowflake:nth-of-type(9),
+.leafs:nth-of-type(9) {
   left: 90%;
   -webkit-animation-delay: 3s, 1.5s;
   animation-delay: 3s, 1.5s;
 }
-.snowflake:nth-of-type(10) {
+.snowflake:nth-of-type(10),
+.leafs:nth-of-type(10) {
   left: 25%;
   -webkit-animation-delay: 2s, 0s;
   animation-delay: 2s, 0s;
 }
-.snowflake:nth-of-type(11) {
+.snowflake:nth-of-type(11),
+.leafs:nth-of-type(11) {
   left: 65%;
   -webkit-animation-delay: 4s, 2.5s;
   animation-delay: 4s, 2.5s;
+}
+
+.switch {
+  padding: 10px;
+  border-radius: 30%;
+  font-size: 1.2em;
+  margin: auto 2%;
+  border: black 2px dashed;
+  background-color: skyblue;
+}
+.switch:hover {
+  background-color: black;
+  color: whitesmoke;
 }
 
 .snowmanbox {
@@ -306,11 +392,11 @@ header .nav-item {
   background-color: #262534;
   flex-wrap: nowrap;
 }
-.nav-item-Home a{
-    background-color: blue;
-    color:white;
-    text-decoration: none;
-    padding:10px;
+.nav-item-Home a {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
 }
 
 header .nav-item a {
@@ -339,7 +425,7 @@ header .nav-item a.active {
 .page {
   margin-top: 21vh;
   background-color: thistle;
-  padding:15px;
+  padding: 15px;
 }
 
 .holiday {
@@ -349,17 +435,16 @@ header .nav-item a.active {
 
 .nutContainer {
   background: radial-gradient(ellipse at center, #e05565 0%, #9d0e2b 100%);
-position: relative;
+  position: relative;
   height: 500px;
   width: 500px;
-  padding:10px;
+  padding: 10px;
 }
 
 .wrapper {
-    background: radial-gradient(ellipse at center, #e05565 0%, #9d0e2b 100%);
-  margin:20% 35%;
+  background: radial-gradient(ellipse at center, #e05565 0%, #9d0e2b 100%);
+  margin: 20% 35%;
   position: absolute;
- 
 }
 
 .helmet {
@@ -385,7 +470,7 @@ position: relative;
   padding: 10px 10px 0;
   position: relative;
   width: 166px;
-  z-index:10;
+  z-index: 10;
 }
 
 .eye {

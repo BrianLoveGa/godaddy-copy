@@ -1,5 +1,29 @@
 console.log("Holidayz");
 
+function snowSwitch() {
+  var x = document.getElementById("snow");
+  var xbtn = document.getElementById("snowBtn");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    xbtn.style.backgroundColor = "skyblue";
+  } else {
+    x.style.display = "none";
+    xbtn.style.backgroundColor = "white";
+  }
+}
+
+function leafsSwitch() {
+  var y = document.getElementById("leaves");
+  var yBtn = document.getElementById("lvBtn");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+    yBtn.style.backgroundColor = "skyblue";
+  } else {
+    y.style.display = "none";
+    yBtn.style.backgroundColor = "white";
+  }
+}
+
 function startTimer() {
   /**
      New Year 2020 Countdown Timer
@@ -52,3 +76,12 @@ function scgWrapChars(str, pad) {
   str = (Math.pow(10, Math.abs(pad)) + str.toString()).slice(pad);
   return str.replace(/\w/g, "<span>$&</span>");
 }
+
+let x = 0;
+
+console.log("x");
+console.log(x);
+
+/// button to hide leafs
+
+/// button to hide snow
