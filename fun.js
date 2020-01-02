@@ -1,11 +1,32 @@
 console.log("Brian Loveless");
 
+/// random color in top
+
 function randoColorSpot() {
   var color = ["red", "blue", "yellow", "orange", "hotpink", "green"];
   var rand = color[Math.floor(Math.random() * color.length)];
   document.getElementById("clickBait").style.backgroundColor = rand;
 }
 
+/// just the tip
+
+/// set bill amount from input field
+
+// function for 15% of input
+// function for 20% of input
+// function for 25% of input
+
+/// no - have 1 button that sets bill 
+// and returns all 3 amounts
+
+
+
+
+/// bulb switch is just the picture changing - js on html file
+
+// same for the get date / clear the date hah ha dad joke / sad joke under the bulb
+
+// red square down
 function myMove() {
   var elem = document.getElementById("animate");
   var pos = 0;
@@ -21,18 +42,21 @@ function myMove() {
   }
 }
 
+// red rectangle scratch
 function mDown(obj) {
-  obj.style.backgroundColor = "rgb(40, 170, 46)";
+  obj.style.backgroundColor = "rgb(245, 170, 65)";
   obj.innerHTML = "AHHH THATS SO GOOOD!!!";
 }
-
+// after scratch
 function mUp(obj) {
-  obj.style.backgroundColor = "#D94A38";
+  obj.style.backgroundColor = "rgb(23, 145, 48)";
   obj.innerHTML = "Thank You very much for that scratch";
 }
 
 console.log("RM TESTING");
 /// https://rickandmortyapi.com/documentation/#javascript
+
+// rick and morty date - not working yet
 
 getRMDate = async => {
   const rand = Math.floor(Math.random() * 490);
@@ -45,7 +69,7 @@ getRMDate = async => {
     .then(res => res.json())
     .then(data => {
       return res.json();
-      console.log(data.name)
+      console.log(data.name);
     })
 
     .then(res => console.log("success!", res))
@@ -65,6 +89,7 @@ getRMDate = async => {
     .catch(err => console.log("something went wrong...", err));
 };
 
+// poke date in progress
 function getPokeDate() {
   const randPm = Math.floor(Math.random() * 360);
   const urlPm = `https://pokeapi.co/api/v2/pokemon/${randPm}`;
@@ -157,5 +182,20 @@ function showHeroes(jsonObj) {
     myArticle.appendChild(myPara3);
     myArticle.appendChild(myList);
     section.appendChild(myArticle);
+  }
+}
+
+/// the end ...... or is it?
+
+var i = 0;
+var txt =
+  "This is the end of my fun with JavaScript site.  I hope You have enjoyed it. There will be more. ...  ";
+var speed = 120;
+// higher speed = slower typing
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("theEnd").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
 }
