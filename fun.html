@@ -28,25 +28,31 @@
       </p>
     </div>
     <div class="theTip">
-      <h2>How much do I tip for my meal?</h2>
-      <h2>allow some javascript to help you out</h2>
-      <h3>input the check amount "round up to whole dollar amount"</h3>
-      <h3>click a button for the amount</h3>
-      <button onclick="fifPercent()">15% Minimum</button>
-      <button onclick="twenPercent()">20% Good</button>
-      <button onclick="twenFivPercent()">25% Great</button>
-     
-      <h4>
-        Amount of bill: $ <input type="text" name="amount" />
-        <div class="bill">000</div>
-      </h4>
-      <br />
-      <button onclick="setBill()">set bill amount</button>
-      <br />
-      <h4 class="owe">
-        Amount of tip: $
-        <div class="tip">0.00</div>
-      </h4>
+      <form>
+        <h2>How much do I tip for my meal?</h2>
+        <h2>allow some javascript to help you out</h2>
+        <h3>input the check amount "round up to whole dollar amount"</h3>
+
+        <h4>
+          Amount of bill: $ <input type="text" id="amount" />
+          
+        </h4>
+        <br />
+        <button id="billSet" onclick="setBill()">set bill amount</button>
+        <br />
+        <h4 class="owe">
+          Amount of 15% tip: $
+          <div class="tip" id="tip15"> </div>
+        </h4>
+        <h4 class="owe">
+          Amount of 20% tip: $
+          <div class="tip" id="tip20"> </div>
+        </h4>
+        <h4 class="owe">
+          Amount of 25% tip: $
+          <div class="tip" id="tip25"> </div>
+        </h4>
+      </form>
     </div>
 
     <div class="bulb">
@@ -133,7 +139,6 @@
       <p id="theEnd"></p>
       <h3>well I guess this is the bottom and all there is for now</h3>
       <button onclick="typeWriter()">Click me for the finale</button>
-      
     </div>
 
     <script src="fun.js"></script>

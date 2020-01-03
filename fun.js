@@ -15,12 +15,39 @@ function randoColorSpot() {
 // function for 15% of input
 // function for 20% of input
 // function for 25% of input
-
-/// no - have 1 button that sets bill 
+console.log("bill");
+/// no - have 1 button that sets bill
 // and returns all 3 amounts
+/// input bill
+/// on click - bill as html and all 3 tip amounts
+document.getElementById("billSet").addEventListener("click", function(event) {
+  event.preventDefault();
+});
 
+function setBill() {
+  let fif = document.getElementById("tip15");
+  let twen = document.getElementById("tip20");
+  let twfv = document.getElementById("tip25");
+  let check = document.getElementById("amount").value;
 
+  if (check <= 0) {
+    alert("please enter a whole positive bill amount");
+  } else {
+    // return check times %'s...
 
+    var totalFif = check * 0.15;
+    tFif = Math.round(totalFif * 100) / 100;
+    fif.textContent = tFif;
+
+    var totalTwen = check * 0.2;
+    tTwen = Math.round(totalTwen * 100) / 100;
+    twen.textContent = tTwen;
+
+    var totalTwenFv = check * 0.25;
+    tTwFv = Math.round(totalTwenFv * 100) / 100;
+    twfv.textContent = tTwFv;
+  }
+}
 
 /// bulb switch is just the picture changing - js on html file
 
