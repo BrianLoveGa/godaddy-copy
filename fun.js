@@ -80,12 +80,23 @@ function mUp(obj) {
   obj.innerHTML = "Thank You very much for that scratch";
 }
 
+// function getRM() {
+//   const rand = Math.floor(Math.random() * 490);
+//   const urlRM = `https://rickandmortyapi.com/api/character/${rand}`;
+//   fetch(urlRM)
+//     .then(info => {
+//       console.log(info.json());
+//       return info.json();
+//     })
+//     .catch(err => console.log("something went wrong...", err));
+// }
+
 console.log("RM TESTING");
 /// https://rickandmortyapi.com/documentation/#javascript
 
 // rick and morty date - not working yet
 
-getRMDate = async => {
+getRM = async => {
   const rand = Math.floor(Math.random() * 490);
   const urlRM = `https://rickandmortyapi.com/api/character/${rand}`;
   let name = document.getElementById("rmName");
@@ -93,51 +104,43 @@ getRMDate = async => {
   let pic = document.getElementById("rmPic");
   console.log(urlRM);
   fetch(urlRM)
-    .then(res => res.json())
-    .then(data => {
-      return res.json();
-      console.log(data.name);
+  
+    .then(res => {
+      console.log(res.json())
+      return res.json()
+    
+      
     })
 
     .then(res => console.log("success!", res))
-    // .then(res => {
-    //   return res.json;
-    // })
 
-    // data = res.json;
-
-    // .then(res => {
-    //   console.log(res.json);
-    //   data = res.json;
-    // })
-    // .then(console.log(res.name))
-    // .then(res => console.log(data.name))
-    // .then((document.getElementById("rmName").innerHTML = "res.name"))
     .catch(err => console.log("something went wrong...", err));
 };
 
 // poke date in progress
 function getPokeDate() {
-  const randPm = Math.floor(Math.random() * 360);
-  const urlPm = `https://pokeapi.co/api/v2/pokemon/${randPm}`;
-  let reqwest = new XMLHttpRequest();
-  reqwest.open("GET", urlPm);
-  reqwest.responseType = "json";
-  reqwest.send();
+//   const randPm = Math.floor(Math.random() * 360);
+//   const urlPm = `https://pokeapi.co/api/v2/pokemon/${randPm}`;
+//   let reqwest = new XMLHttpRequest();
+//   reqwest.open("GET", urlPm);
+//   reqwest.responseType = "json";
+//   reqwest.send();
 
-  reqwest.onload = function() {
-    const pokeInfo = reqwest.response;
-    const pokeDates = JSON.parse(pokeInfo);
-    console.log(pokeDates);
-    //showPoke(PokeDates);
-  };
+//   reqwest.onload = function() {
+//     const pokeInfo = reqwest.response;
+//     const pokeDates = JSON.parse(pokeInfo);
+     console.log('pokeDates this no work');
+//     //showPoke(PokeDates);
+//   };
+// }
+
+// const pokeName = document.getElementById("pkName");
+// function showPoke(jsonPoke) {
+//   pokeName.textContent = jsonPoke["name"];
 }
 
-const pokeName = document.getElementById("pkName");
-function showPoke(jsonPoke) {
-  pokeName.textContent = jsonPoke["name"];
-}
 
+/// works to console log
 getDatePoke = async => {
   const randPm = Math.floor(Math.random() * 360);
   const urlPm = `https://pokeapi.co/api/v2/pokemon/${randPm}`;
@@ -152,6 +155,11 @@ getDatePoke = async => {
       console.log("something went wrong...", err);
     });
 };
+
+
+
+
+
 
 /// mozilla json heroes
 function needAHero() {
