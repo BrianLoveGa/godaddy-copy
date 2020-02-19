@@ -81,7 +81,9 @@ footer {
 
 }
 
-
+.hide{
+  display:none;
+}
 
 #theEnd{
   font-size: 1.5em;

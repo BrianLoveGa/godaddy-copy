@@ -10,6 +10,8 @@
   </head>
   <body>
     <header>
+      <a class="holidayLink" href="index.html">Back to Home page</a>
+      <a class="holidayLink" href="holiday.html">Some holiday fun</a>
       <h1 class="top">The fun site</h1>
     </header>
     <div class="opener">
@@ -33,24 +35,21 @@
         <h2>allow some javascript to help you out</h2>
         <h3>input the check amount "round up to whole dollar amount"</h3>
 
-        <h4>
-          Amount of bill: $ <input type="text" id="amount" />
-          
-        </h4>
+        <h4>Amount of bill: $ <input type="text" id="amount" /></h4>
         <br />
         <button id="billSet" onclick="setBill()">set bill amount</button>
         <br />
         <h4 class="owe">
           Amount of 15% tip: $
-          <div class="tip" id="tip15"> </div>
+          <div class="tip" id="tip15"></div>
         </h4>
         <h4 class="owe">
           Amount of 20% tip: $
-          <div class="tip" id="tip20"> </div>
+          <div class="tip" id="tip20"></div>
         </h4>
         <h4 class="owe">
           Amount of 25% tip: $
-          <div class="tip" id="tip25"> </div>
+          <div class="tip" id="tip25"></div>
         </h4>
       </form>
     </div>
@@ -104,20 +103,36 @@
       <h2>Wubba Lubba Dub Dub</h2>
       <h3>
         If you still need a date click the button below for a random Rick and
-        Morty Character
+        Morty character to romantically persue.
       </h3>
-      <button onclick="getRM()">R & M Date</button>
+      <h4>
+        please allow a few seconds after clicking the button- this is free and
+        cheap what do you expect?
+      </h4>
+      <button onclick="getRM()">R & M Date generator button</button>
       <p id="rmName"></p>
       <p id="rmSpecies"></p>
-      <p id="gender"></p>
-      <img id="rmPic" alt="character from rick and morty cartoon" src="" />
-      <h3>Maybe you'd rather catch a Pokémon</h3>
-      <button onclick="getPokeDate()">catch em all</button>
-      <button onclick="getDatePoke()">Ga style</button>
+
+      <img
+        class="hide"
+        id="rmPic"
+        alt="character from rick and morty cartoon"
+        src=""
+      />
+      <p id="rmGender"></p>
+      <h3>Maybe you'd rather catch a Pokémon than an intergalatic STD.</h3>
+      <h4>
+        please allow a few seconds after clicking the button- this is free and
+        cheap what do you expect?
+      </h4>
+
+      <button onclick="getDatePoke()">
+        See what you can catch Poké button
+      </button>
       <p id="pkName"></p>
-      <p id="pkHeight"></p>
+      <p id="pkExp"></p>
       <p id="pkWeight"></p>
-      <img id="pkPic" alt="pokemon_character" src="" />
+      <img class="hide" id="pkPic" alt="pokemon_character" src="" />
       <h3>other api's to fetch</h3>
       <ul>
         <li>Bob's burgers - doesn't exist hope to help build it</li>

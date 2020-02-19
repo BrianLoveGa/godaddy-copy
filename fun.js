@@ -80,87 +80,63 @@ function mUp(obj) {
   obj.innerHTML = "Thank You very much for that scratch";
 }
 
-// function getRM() {
-//   const rand = Math.floor(Math.random() * 490);
-//   const urlRM = `https://rickandmortyapi.com/api/character/${rand}`;
-//   fetch(urlRM)
-//     .then(info => {
-//       console.log(info.json());
-//       return info.json();
-//     })
-//     .catch(err => console.log("something went wrong...", err));
-// }
 
 console.log("RM TESTING");
-/// https://rickandmortyapi.com/documentation/#javascript
 
-// rick and morty date - not working yet
-
-getRM = async => {
-  const rand = Math.floor(Math.random() * 490);
-  const urlRM = `https://rickandmortyapi.com/api/character/${rand}`;
-  let name = document.getElementById("rmName");
-  let type = document.getElementById("rmSpecies");
-  let pic = document.getElementById("rmPic");
-  console.log(urlRM);
-  fetch(urlRM)
-  
-    .then(res => {
-      console.log(res.json())
-      return res.json()
-    
-      
+function getRM() {
+  let rand = Math.floor(Math.random() * 490);
+  const urlRM = `https://rickandmortyapi.com/api/character/`;
+  console.log(`${urlRM}${rand}`);
+  fetch(`${urlRM}${rand}`)
+    .then(results => {
+      return results.json();
     })
-
-    .then(res => console.log("success!", res))
-
-    .catch(err => console.log("something went wrong...", err));
-};
-
-// poke date in progress
-function getPokeDate() {
-//   const randPm = Math.floor(Math.random() * 360);
-//   const urlPm = `https://pokeapi.co/api/v2/pokemon/${randPm}`;
-//   let reqwest = new XMLHttpRequest();
-//   reqwest.open("GET", urlPm);
-//   reqwest.responseType = "json";
-//   reqwest.send();
-
-//   reqwest.onload = function() {
-//     const pokeInfo = reqwest.response;
-//     const pokeDates = JSON.parse(pokeInfo);
-     console.log('pokeDates this no work');
-//     //showPoke(PokeDates);
-//   };
-// }
-
-// const pokeName = document.getElementById("pkName");
-// function showPoke(jsonPoke) {
-//   pokeName.textContent = jsonPoke["name"];
+    .then(displayResults);
 }
 
+function displayResults(results) {
+  console.log(results);
+  let name = document.getElementById("rmName");
+  name.innerText = `NAME: ${results.name}`;
+  let type = document.getElementById("rmSpecies");
+  type.innerText = `type: ${results.species}`;
+  let pic = document.getElementById("rmPic");
+  pic.src = `${results.image}`;
+  pic.style.display = "block";
+  let gender = document.getElementById("rmGender");
+  gender.innerText = `gender = ${results.gender}`;
+}
 
 /// works to console log
-getDatePoke = async => {
+function getDatePoke() {
   const randPm = Math.floor(Math.random() * 360);
   const urlPm = `https://pokeapi.co/api/v2/pokemon/${randPm}`;
 
   console.log(urlPm);
   fetch(urlPm)
-    .then(res => res.json())
     .then(res => {
-      console.log("success!", res);
+      return res.json();
     })
+    .then(showPokemon)
     .catch(err => {
       console.log("something went wrong...", err);
     });
-};
+}
 
-
-
-
-
-
+function showPokemon(res) {
+  console.log(res);
+  let name = document.getElementById("pkName");
+  name.innerText = `Catch yourself a  ${res.name}`;
+  let experience = document.getElementById("pkExp");
+  experience.innerText = ` With ${res.base_experience} as base experience`;
+  let weight = document.getElementById("pkWeight");
+  weight.innerText = `Weighing in at ${res.weight} pounds`;
+  let photo = document.getElementById("pkPic");
+  photo.src = `${res.sprites.front_default}`;
+  photo.style.display = "block";
+  photo.style.width = '300px'
+  
+}
 /// mozilla json heroes
 function needAHero() {
   let requestURL =
